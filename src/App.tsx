@@ -13,7 +13,7 @@ function App() {
       setNomes(aux);
     }
 
-    const saida = nomes.map( (item, index) => <li key={index}>{item}</li>);
+    //const saida = nomes.map( (item, index) => <li key={index}>{item}</li>);
 
     return (
     <div>
@@ -23,10 +23,18 @@ function App() {
         <input id="name" value={nome} onChange={(e)=>setNome(e.target.value)} />
         <button onClick={()=>save()}>Salvar</button>
       </div>
-      <div>Nome : {nome}</div>
-      <ol>{saida}</ol>
+      <Output lista={nomes}/>
     </div>
   );
 }
 
 export default App;
+
+function Output(props:Props){
+  const saida = props.lista.map( (item, index) => <li key={index}>{item}</li>);
+  return <ul>{saida}</ul>
+}
+
+interface Props{
+  lista:string[]
+}
