@@ -17,7 +17,7 @@ function App() {
 
     return (
     <div>
-      <h3>Exerício 1</h3>
+      <h3>Exercício 1</h3>
       <div>
         <label htmlFor="name">Nome</label>
         <input id="name" value={nome} onChange={(e)=>setNome(e.target.value)} />
