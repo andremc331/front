@@ -17,9 +17,9 @@ function App() {
 
     return (
     <div>
-      <h3>Exercício 1</h3>
+      <h3>Nutritech</h3>
       <div>
-        <label htmlFor="name">Nome</label>
+        <label htmlFor="name">Usuário:</label>
         <input id="name" value={nome} onChange={(e)=>setNome(e.target.value)} />
         <button onClick={()=>save()}>Salvar</button>
       </div>
